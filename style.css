@@ -75,6 +75,7 @@ body {
 }
 
 .title {
+  position: relative;
   font-family: var(--font-serif);
   font-size: clamp(3rem, 9vw, 6.5rem);
   font-weight: 700;
@@ -82,6 +83,29 @@ body {
   letter-spacing: -0.02em;
   color: var(--white);
   margin-bottom: 28px;
+}
+
+.dot-with-canard {
+  position: relative;
+  display: inline-flex;
+  width: 0.4em;
+  height: 0.4em;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+
+.dot-with-canard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(canard.png);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .title em {
